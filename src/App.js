@@ -14,7 +14,7 @@ const App = () => {
   const joinRoom = () => {
     if (!room) return alert("Please enter a room name!");
     setLoading(true);
-    socketRef.current = new WebSocket("https://realtime-socket-server.onrender.com");
+    socketRef.current = new WebSocket("ws://localhost:8080");
 
     socketRef.current.onopen = () => {
       setIsConnected(true);
